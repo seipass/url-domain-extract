@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "url-domain-extract"
+version = "1.0.0"
+description = "Extract a normalized hostname from a URL or bare host."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "seipass"}]
+
+[project.scripts]
+url-domain-extract = "url_domain_extract:main"
+
+[tool.setuptools]
+py-modules = ["url_domain_extract"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
